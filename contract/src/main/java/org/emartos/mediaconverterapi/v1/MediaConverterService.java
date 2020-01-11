@@ -1,14 +1,14 @@
 package org.emartos.mediaconverterapi.v1;
 
 import org.emartos.mediaconverterapi.v1.exceptions.BadRequestException;
-import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.HashMap;
 
 
-@RestController
-//@RequestMapping(MediaConverterServiceApi.MEDIA_CONVERTER_API_PATH + MediaConverterServiceApi.VERSION)
+//@RestController
+@RequestMapping(MediaConverterServiceApi.MEDIA_CONVERTER_API_PATH + MediaConverterServiceApi.VERSION)
 public interface MediaConverterService {
 
     /**
@@ -25,6 +25,6 @@ public interface MediaConverterService {
 //    Response resizeImage(@RequestHeader("apiKey") String apiKey, @MultipartForm ResizeFileUploadForm form)
 //            throws BadRequestException;
 
-    @GetMapping("/health-check-api")
+    @GetMapping("/health-check")
     HashMap<String, String> indexApi();
 }
