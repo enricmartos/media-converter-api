@@ -8,7 +8,7 @@ import java.util.HashMap;
 
 
 @RestController
-@RequestMapping(MediaConverterServiceApi.MEDIA_CONVERTER_API_PATH + MediaConverterServiceApi.VERSION)
+//@RequestMapping(MediaConverterServiceApi.MEDIA_CONVERTER_API_PATH + MediaConverterServiceApi.VERSION)
 public interface MediaConverterService {
 
     /**
@@ -25,6 +25,6 @@ public interface MediaConverterService {
 //    Response resizeImage(@RequestHeader("apiKey") String apiKey, @MultipartForm ResizeFileUploadForm form)
 //            throws BadRequestException;
 
-    @GetMapping("/health-check")
+    @GetMapping("/health-check-api")
     HashMap<String, String> indexApi();
 }
