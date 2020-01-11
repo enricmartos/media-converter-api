@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.HashMap;
 
 
-//@RestController
 @RequestMapping(MediaConverterServiceApi.MEDIA_CONVERTER_API_PATH + MediaConverterServiceApi.VERSION)
 public interface MediaConverterService {
 
