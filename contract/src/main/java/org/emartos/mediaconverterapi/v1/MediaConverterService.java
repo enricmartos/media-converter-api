@@ -1,8 +1,8 @@
 package org.emartos.mediaconverterapi.v1;
 
 import org.emartos.mediaconverterapi.v1.exceptions.BadRequestException;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.HashMap;
 
@@ -26,4 +26,8 @@ public interface MediaConverterService {
 
     @GetMapping("/health-check")
     HashMap<String, String> indexApi();
+
+    @PostMapping("/file/upload")
+    void resizeImage(@RequestHeader("apiKey") String apiKey, @RequestParam("file") MultipartFile file)
+            throws BadRequestException;
 }
