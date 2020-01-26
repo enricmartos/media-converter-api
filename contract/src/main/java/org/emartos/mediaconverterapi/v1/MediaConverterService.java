@@ -9,7 +9,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.HashMap;
 
 
-//@RestController
 @RequestMapping(MediaConverterServiceApi.MEDIA_CONVERTER_API_PATH + MediaConverterServiceApi.VERSION)
 public interface MediaConverterService {
 
