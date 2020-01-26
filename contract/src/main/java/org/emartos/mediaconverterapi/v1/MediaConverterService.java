@@ -22,5 +22,5 @@ public interface MediaConverterService {
                                              @RequestParam("selectedFile") MultipartFile file) throws BadRequestException;
 
     @GetMapping("/health-check")
-    HashMap<String, String> indexApi();
+    HashMap<String, String> healthCheck();
 }
