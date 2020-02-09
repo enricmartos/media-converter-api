@@ -1,6 +1,8 @@
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
 //    implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+    //Avoid NumberFormatException exception related to Swagger annotations like @ApiParam
+    //https://github.com/springfox/springfox/issues/2265#issuecomment-424956678
     compile("io.springfox:springfox-swagger2:2.9.2") {
         exclude module: 'swagger-annotations'
         exclude module: 'swagger-models'
