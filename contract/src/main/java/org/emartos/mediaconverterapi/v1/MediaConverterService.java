@@ -19,7 +19,7 @@ public interface MediaConverterService {
 
     @PostMapping("/image/autorotate")
     ResponseEntity<Resource> autorotateImage(@RequestHeader("apiKey") String apiKey,
-                                                    @RequestParam("file") MultipartFile file) throws BadRequestException;
+                                                    @RequestParam("selectedFile") MultipartFile file) throws BadRequestException;
 
     @GetMapping("/health-check")
     HashMap<String, String> healthCheck();
