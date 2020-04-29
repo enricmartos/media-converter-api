@@ -9,7 +9,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.HashMap;
 
 
-//@RestController
 @RequestMapping(MediaConverterServiceApi.MEDIA_CONVERTER_API_PATH + MediaConverterServiceApi.VERSION)
 public interface MediaConverterService {
 
@@ -23,5 +22,5 @@ public interface MediaConverterService {
                                                     @RequestParam("file") MultipartFile file) throws BadRequestException;
 
     @GetMapping("/health-check")
-    HashMap<String, String> indexApi();
+    HashMap<String, String> healthCheck();
 }
