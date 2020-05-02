@@ -10,7 +10,7 @@ import java.util.HashMap;
 
 
 @RequestMapping(MediaConverterServiceApi.MEDIA_CONVERTER_API_PATH + MediaConverterServiceApi.VERSION)
-public interface MediaConverterService {
+public interface ImageService {
 
     @PostMapping("/image/resize")
     ResponseEntity<Resource> resizeImage(@RequestHeader("apiKey") String apiKey, @RequestParam("selectedFile") MultipartFile file,
@@ -21,6 +21,4 @@ public interface MediaConverterService {
     ResponseEntity<Resource> autorotateImage(@RequestHeader("apiKey") String apiKey,
                                                     @RequestParam("selectedFile") MultipartFile file) throws BadRequestException;
 
-    @GetMapping("/health-check")
-    HashMap<String, String> healthCheck();
 }

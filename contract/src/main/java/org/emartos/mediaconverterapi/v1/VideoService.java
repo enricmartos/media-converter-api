@@ -14,7 +14,7 @@ import java.util.HashMap;
 
 
 @RequestMapping(MediaConverterServiceApi.MEDIA_CONVERTER_API_PATH + MediaConverterServiceApi.VERSION)
-public interface MediaConverterVideoService {
+public interface VideoService {
 
     @PostMapping("/video/trim")
     ResponseEntity<Resource> trimVideo(@RequestHeader("apiKey") String apiKey, @RequestParam("selectedFile") MultipartFile file,
